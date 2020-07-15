@@ -24,11 +24,11 @@ def fast_function():
 
 if __name__ == "__main__":
     print("Running performance profiling demo...")
-    
+
     # Run functions multiple times
     for _ in range(5):
         slow_function()
         fast_function()
-    
+
     # Display results
     profiler.print_results()
