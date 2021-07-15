@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="performance-profiler-optimizer",
-    version="0.1.0",
+    version="1.0.0",
     author="Performance Optimizer Team",
     author_email="team@perfoptimizer.dev",
     description="A comprehensive Python profiling toolkit with auto-optimization",
@@ -18,7 +18,7 @@ setup(
     url="https://github.com/yourusername/performance-profiler-optimizer",
     packages=find_packages(),
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Testing",
         "License :: OSI Approved :: MIT License",
@@ -27,6 +27,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
     ],
     python_requires=">=3.7",
     install_requires=[

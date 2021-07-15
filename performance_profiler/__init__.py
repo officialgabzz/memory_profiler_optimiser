@@ -3,7 +3,7 @@ Performance Profiler & Optimizer
 A comprehensive Python profiling toolkit with auto-optimization capabilities.
 """
 
-__version__ = "0.6.0"
+__version__ = "1.0.0"
 __author__ = "Performance Optimizer Team"
 
 from .profiler import PerformanceProfiler
@@ -12,6 +12,7 @@ from .line_profiler import LineByLineProfiler
 from .optimizer import OptimizerEngine, OptimizationSuggestion
 from .comparator import ComparisonEngine, ComparisonResult
 from .bottleneck_detector import BottleneckDetector, Bottleneck
+from .historical_tracker import HistoricalTracker
 
 __all__ = [
     "PerformanceProfiler",
@@ -23,4 +24,5 @@ __all__ = [
     "ComparisonResult",
     "BottleneckDetector",
     "Bottleneck",
+    "HistoricalTracker",
 ]

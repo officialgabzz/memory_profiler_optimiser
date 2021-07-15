@@ -43,3 +43,8 @@ htmlcov/
 
 # Logs
 *.log
+
+# Performance profiler artifacts
+performance_history.db
+demo_performance.db
+comparison_results.json
