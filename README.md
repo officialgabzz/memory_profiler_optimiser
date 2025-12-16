@@ -240,8 +240,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📧 Contact
 
-For questions, issues, or suggestions, please open an issue on GitHub.
+**Author:** Malik Garuba  
+**Email:** garubamalik@gmail.com
+
+For questions, issues, or suggestions, please open an issue on GitHub or contact via email.
 
 ---
 
-Made with ❤️ by the Performance Optimizer Team
+Made with ❤️ by Malik Garuba

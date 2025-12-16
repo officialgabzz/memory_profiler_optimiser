@@ -25,20 +25,14 @@ echo "🚀 Creating GitHub Releases for Performance Profiler & Optimizer"
 echo "================================================================="
 echo ""
 
-# Array of versions and their details
-declare -A releases=(
-    ["v0.1.0"]="2020-01-15"
-    ["v0.2.0"]="2020-04-15"
-    ["v0.3.0"]="2020-07-15"
-    ["v0.4.0"]="2020-10-15"
-    ["v0.5.0"]="2021-01-15"
-    ["v0.6.0"]="2021-04-15"
-    ["v1.0.0"]="2021-07-15"
-)
+# Array of versions with their dates
+versions=("v0.1.0" "v0.2.0" "v0.3.0" "v0.4.0" "v0.5.0" "v0.6.0" "v1.0.0")
+dates=("2020-01-15" "2020-04-15" "2020-07-15" "2020-10-15" "2021-01-15" "2021-04-15" "2021-07-15")
 
 # Create releases
-for version in v0.1.0 v0.2.0 v0.3.0 v0.4.0 v0.5.0 v0.6.0 v1.0.0; do
-    date="${releases[$version]}"
+for i in "${!versions[@]}"; do
+    version="${versions[$i]}"
+    date="${dates[$i]}"
     notes_file=".github/release_notes/${version}.md"
     
     echo "📝 Creating release ${version} (${date})..."
@@ -48,10 +42,14 @@ for version in v0.1.0 v0.2.0 v0.3.0 v0.4.0 v0.5.0 v0.6.0 v1.0.0; do
         gh release create "$version" \
             --title "Release ${version}" \
             --notes-file "$notes_file" \
-            --target "$version" \
             --repo "${REPO_OWNER}/${REPO_NAME}" || echo "⚠️  Release ${version} may already exist"
     else
         echo "⚠️  Release notes file not found: ${notes_file}"
+        # Create release with auto-generated notes
+        gh release create "$version" \
+            --title "Release ${version}" \
+            --generate-notes \
+            --repo "${REPO_OWNER}/${REPO_NAME}" || echo "⚠️  Release ${version} may already exist"
     fi
     
     echo "✅ Release ${version} created"
