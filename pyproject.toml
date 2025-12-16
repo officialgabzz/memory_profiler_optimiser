@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "performance-profiler-optimizer"
+version = "1.0.0"
+description = "Comprehensive Python profiling toolkit with memory tracking, bottleneck detection, and historical analysis"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Garuba Malik", email = "garubamalik@gmail.com"}
+]
+keywords = [
+    "performance",
+    "profiling",
+    "optimization",
+    "memory",
+    "bottleneck",
+    "tracking",
+    "monitoring",
+    "profiler",
+    "analyzer"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+    "Topic :: System :: Monitoring",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "psutil>=5.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/officialgabzz/memory_profiler_optimiser"
+Documentation = "https://github.com/officialgabzz/memory_profiler_optimiser#readme"
+Repository = "https://github.com/officialgabzz/memory_profiler_optimiser"
+Issues = "https://github.com/officialgabzz/memory_profiler_optimiser/issues"
+Changelog = "https://github.com/officialgabzz/memory_profiler_optimiser/blob/master/CHANGELOG.md"
+
+[tool.setuptools]
+packages = ["performance_profiler"]
+
+[tool.setuptools.package-data]
+performance_profiler = ["*.py"]
